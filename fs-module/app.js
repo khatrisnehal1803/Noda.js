@@ -1,0 +1,6 @@
+const fs = require("fs");
+
+fs.writeFileSync(
+  "index.html",
+  "<html><head><title>Node File System</title></head><body>Hey there! This page is made using the FS module.</body></html>"
+);
