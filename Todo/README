@@ -19,29 +19,6 @@ A professional-grade TODO application that supports full CRUD operations, useful
 
 ## File & Folder Structure
 
-```
-todo-app/
-├── backend/
-│   ├── server.js
-│   ├── config/db.js
-│   ├── controllers/todoController.js
-│   ├── models/Todo.js
-│   ├── routes/todoRoutes.js
-│   └── .env
-└── frontend/
-    ├── public/
-    ├── src/
-    │   ├── components/
-    │   │   ├── TodoForm.jsx
-    │   │   ├── TodoList.jsx
-    │   │   └── TodoItem.jsx
-    │   ├── pages/
-    │   │   └── Home.jsx
-    │   ├── App.js
-    │   └── index.js
-    └── package.json
-```
-
 ## Data Model (Todo)
 
 ```json
