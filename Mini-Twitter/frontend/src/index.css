@@ -1,0 +1,85 @@
+
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    /* Twitter-inspired design system */
+    --background: 0 0% 100%;
+    --foreground: 210 24% 16%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 210 24% 16%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 210 24% 16%;
+
+    /* Twitter Blue */
+    --primary: 203 89% 53%;
+    --primary-foreground: 0 0% 100%;
+    --primary-hover: 203 89% 48%;
+
+    --secondary: 210 20% 96%;
+    --secondary-foreground: 210 24% 16%;
+
+    --muted: 210 20% 96%;
+    --muted-foreground: 210 12% 50%;
+
+    --accent: 203 89% 53%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 210 20% 90%;
+    --input: 210 20% 90%;
+    --ring: 203 89% 53%;
+
+    --radius: 0.75rem;
+    
+    /* Custom Twitter tokens */
+    --twitter-bg: 0 0% 98%;
+    --tweet-hover: 0 0% 97%;
+    --twitter-text: 210 24% 16%;
+    --twitter-text-secondary: 210 12% 50%;
+  }
+
+  .dark {
+    --background: 210 24% 12%;
+    --foreground: 0 0% 95%;
+
+    --card: 210 24% 14%;
+    --card-foreground: 0 0% 95%;
+
+    --popover: 210 24% 14%;
+    --popover-foreground: 0 0% 95%;
+
+    --primary: 203 89% 53%;
+    --primary-foreground: 0 0% 100%;
+    --primary-hover: 203 89% 58%;
+
+    --secondary: 210 24% 18%;
+    --secondary-foreground: 0 0% 95%;
+
+    --muted: 210 24% 18%;
+    --muted-foreground: 210 12% 65%;
+
+    --accent: 203 89% 53%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 210 24% 20%;
+    --input: 210 24% 20%;
+    --ring: 203 89% 53%;
+    
+    --twitter-bg: 210 24% 10%;
+    --tweet-hover: 210 24% 16%;
+    --twitter-text: 0 0% 95%;
+    --twitter-text-secondary: 210 12% 65%;
+  }
+}
+
