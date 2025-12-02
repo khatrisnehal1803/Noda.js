@@ -1,0 +1,138 @@
+
+
+> This document is the project description for the Full-Stack TODO Management System (React frontend + Node/Express backend + MongoDB). It is written in Markdown so you can save it as `README.md` or any other `.md` file.
+
+---
+
+## Project Overview
+
+A professional-grade TODO application that supports full CRUD operations, useful fields for production workflows, and a clean React-based UI. The backend is an Express server with MongoDB for persistence. This README provides a complete description, setup & run instructions, API reference, data model, and example requests.
+
+## Key Features
+
+* Create, Read, Update, Delete (CRUD) todos
+* Fields: `title`, `description`, `dead_line`, `priority`, `isCompleted`, `createdAt`, `isExtended`, `status`
+* Mark as completed / uncompleted
+* Filter, sort and search (optional to implement)
+* Clean React components (TodoForm, TodoList, TodoItem)
+* RESTful API endpoints
+
+## File & Folder Structure
+
+## Data Model (Todo)
+
+```json
+{
+  "_id": "ObjectId",
+  "title": "string",
+  "description": "string",
+  "dead_line": "ISODate",
+  "priority": "high|medium|low",
+  "isCompleted": true|false,
+  "createdAt": "ISODate",
+  "isExtended": true|false,
+  "status": "pending|completed|overdue"
+}
+```
+
+## Environment Variables
+
+Create a `.env` file inside the `backend` folder with:
+
+```
+MONGO_URL=mongodb+srv://<username>:<password>@cluster0.mongodb.net/todo-app
+PORT=5000
+```
+
+## Installation & Run (Step-by-step)
+
+### 1. Clone repository
+
+```bash
+git clone <your-repo-url>
+cd todo-app
+```
+
+### 2. Backend setup
+
+```bash
+cd backend
+npm install
+# create .env with MONGO_URL
+node server.js
+# or use nodemon if installed
+nodemon server.js
+```
+
+The API base will be: `http://localhost:5000/api/todos` (unless you change `PORT`).
+
+### 3. Frontend setup
+
+Open a new terminal window/tab:
+
+```bash
+cd frontend
+npm install
+npm start
+```
+
+React dev server opens at `http://localhost:3000` by default.
+
+## API Endpoints
+
+* `GET /api/todos` — get all todos
+* `POST /api/todos` — create a todo (body: JSON)
+* `GET /api/todos/:id` — get todo by id
+* `PUT /api/todos/:id` — update todo by id (body: JSON)
+* `DELETE /api/todos/:id` — delete todo by id
+
+### Example: Create Todo (curl)
+
+```bash
+curl -X POST http://localhost:5000/api/todos \
+  -H "Content-Type: application/json" \
+  -d '{
+    "title":"Finish project",
+    "description":"Complete the TODO app",
+    "dead_line":"2025-12-31T23:59:59.000Z",
+    "priority":"high"
+  }'
+```
+
+### Example: Update `isCompleted`
+
+```bash
+curl -X PUT http://localhost:5000/api/todos/<id> \
+  -H "Content-Type: application/json" \
+  -d '{"isCompleted": true, "status":"completed"}'
+```
+
+## Frontend Notes
+
+* `TodoForm.jsx` handles create; after successful post it should re-fetch todos or use optimistic UI update.
+* `TodoList.jsx` maps todos to `TodoItem`.
+* `TodoItem.jsx` supports toggling completion and deleting a todo.
+* Keep API base URL easy to change (e.g., `const API = process.env.REACT_APP_API_URL || 'http://localhost:5000/api';`).
+
+## Optional Improvements
+
+* Add authentication (JWT) and user-based todos
+* Add pagination and advanced filters (by priority, status, deadline)
+* Add unit tests (Jest for frontend, Mocha/Jest for backend)
+* Add CI/CD and deployment scripts
+* Add Dockerfile + docker-compose for reproducible local setup
+
+## Troubleshooting
+
+* If Mongo connection fails, confirm `.env` and IP whitelist for MongoDB Atlas.
+* If CORS errors appear, ensure backend uses `cors()` middleware.
+* If port in use, change `PORT` env var or kill conflicting process.
+
+## License
+
+MIT
+
+---
+
+*End of description.*
+
