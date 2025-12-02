@@ -1,1 +1,80 @@
 
+# 🐦 Mini Twitter – Tweet Posting App
+
+## 🔹 Project Overview
+A **Mini Twitter clone** where users can:
+
+- ✅ Add a tweet  
+- ✅ Edit a tweet  
+- ✅ Delete a tweet  
+- ✅ View all tweets  
+
+UI resembles a **simple Twitter home timeline**.
+
+---
+
+## ⚙️ Backend – Node + Express
+
+### 🛠 Tech Stack
+- `Node.js` + `Express`  
+- Core modules: `fs`, `path`  
+- User-defined module: `tweetService.js`  
+
+### 🔄 API Routes (CRUD)
+| Route | Method | Description |
+|-------|--------|-------------|
+| `/api/tweets` | GET | List all tweets |
+| `/api/tweets` | POST | Add new tweet (username + tweet) |
+| `/api/tweets/:id` | PUT | Update tweet text |
+| `/api/tweets/:id` | DELETE | Delete tweet by ID |
+
+### 🛡 Middleware
+- **App-level:** Logs each request as `METHOD + URL + Time`  
+  Example: `POST /api/tweets  10:45:22 AM`
+- **Route-level (POST/PUT):**  
+  - Validate tweet not empty  
+  - Minimum length = 5 characters  
+
+### 📁 File Structure
+project/
+├─ backend/
+│  ├─ app.js
+│  ├─ routes/
+│  │  └─ tweetRoutes.js
+│  ├─ middleware/
+│  │  ├─ logger.js
+│  │  └─ validateTweet.js
+│  ├─ services/
+│  │  └─ tweetService.js
+│  ├─ data/
+│  │  └─ tweets.json
+│  └─ package.json
+└─ frontend/
+   ├─ package.json
+   └─ src/
+      ├─ index.js
+      ├─ App.js
+      ├─ components/
+      │  ├─ TweetForm.js
+      │  └─ TweetList.js
+      └─ styles.css
+
+---
+
+## 🎨 Frontend – React
+
+### 📝 Features
+- **Tweet Input Box:**  
+  - ✏ Username (input)  
+  - ✏ Tweet (textarea)  
+  - ✏ Submit button
+- **Display Tweets:**  
+  - 🔹 Username  
+  - 🔹 Tweet content  
+  - 🔹 Created time  
+  - 🔹 Edit & Delete buttons  
+
+### 🌐 API Integration
+- Use **Fetch API**  
+```js
+fetch("/api/tweets")
