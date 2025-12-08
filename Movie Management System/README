@@ -1,1 +1,358 @@
+# 🎬 Movie Management System - Backend Documentation
 
+## 📋 Overview
+
+A complete RESTful API backend for managing movies with full CRUD operations, image upload support, and search functionality.
+
+---
+
+## 🛠️ Technology Stack
+
+| Technology | Purpose |
+|------------|---------|
+| Node.js | JavaScript Runtime |
+| Express.js | Web Framework |
+| MongoDB | NoSQL Database |
+| Mongoose | MongoDB ODM |
+| Multer | File Upload Handling |
+| CORS | Cross-Origin Resource Sharing |
+| dotenv | Environment Variables |
+
+---
+
+## 📁 Folder Structure
+
+```
+backend/
+│
+├── 📂 config/
+│   └── db.js                    # MongoDB connection configuration
+│
+├── 📂 controllers/
+│   └── movieController.js       # Business logic for all movie operations
+│
+├── 📂 middleware/
+│   └── upload.js                # Multer configuration for image uploads
+│
+├── 📂 models/
+│   └── Movie.js                 # Mongoose schema for Movie collection
+│
+├── 📂 routes/
+│   └── movieRoutes.js           # API route definitions
+│
+├── 📂 uploads/                  # Directory for uploaded poster images
+│
+├── 📄 .env                      # Environment variables (MongoDB URI, Port)
+├── 📄 app.js                    # Express application setup
+├── 📄 server.js                 # Server entry point
+└── 📄 package.json              # Project dependencies
+```
+
+---
+
+## 🔌 API Endpoints
+
+### Base URL
+```
+http://localhost:5000/api/movies
+```
+
+### Endpoints
+
+| Method | Endpoint | Description | Request Body |
+|--------|----------|-------------|--------------|
+| `GET` | `/` | Get all movies | - |
+| `GET` | `/:id` | Get single movie by ID | - |
+| `POST` | `/` | Create new movie | `multipart/form-data` |
+| `PUT` | `/:id` | Update existing movie | `multipart/form-data` |
+| `DELETE` | `/:id` | Delete movie | - |
+| `GET` | `/search?q=query` | Search movies by title | - |
+
+---
+
+
+---
+
+## 👨‍💻 Author
+
+Movie Management System Backend
+
+
+
+
+
+
+# 🎬 Movie Management System - Frontend Documentation
+
+## 📋 Overview
+
+A modern, responsive React-based frontend for managing movies with a cinematic dark theme, featuring CRUD operations, search functionality, and beautiful UI animations.
+
+---
+
+## 🛠️ Technology Stack
+
+| Technology | Purpose |
+|------------|---------|
+| React 18 | UI Library |
+| Vite | Build Tool & Dev Server |
+| TypeScript/JavaScript | Programming Language |
+| Tailwind CSS | Styling Framework |
+| Shadcn/UI | UI Component Library |
+| React Router DOM | Client-side Routing |
+| React Query | Server State Management |
+| Lucide React | Icon Library |
+| Sonner | Toast Notifications |
+
+---
+
+## 📁 Folder Structure
+
+```
+src/
+│
+├── 📂 assets/                   # Static assets (images, fonts)
+│
+├── 📂 components/
+│   ├── 📂 layout/               # Layout components
+│   │   └── index.ts
+│   │
+│   ├── 📂 movies/               # Movie-specific components
+│   │   ├── DeleteConfirmDialog.jsx    # Delete confirmation modal
+│   │   ├── EmptyState.jsx             # No movies found state
+│   │   ├── Header.jsx                 # Page header component
+│   │   ├── MovieCard.jsx              # Individual movie card
+│   │   ├── MovieDetails.jsx           # Movie detail view
+│   │   ├── MovieForm.jsx              # Add/Edit movie form
+│   │   └── SearchInput.jsx            # Search input component
+│   │
+│   ├── 📂 ui/                   # Shadcn UI components
+│   │   ├── button.jsx
+│   │   ├── card.jsx
+│   │   ├── dialog.jsx
+│   │   ├── input.jsx
+│   │   ├── select.jsx
+│   │   ├── textarea.jsx
+│   │   └── ... (other UI components)
+│   │
+│   └── NavLink.tsx              # Navigation link component
+│
+├── 📂 data/
+│   └── mockMovies.js            # Mock movie data for development
+│
+├── 📂 hooks/
+│   ├── use-mobile.jsx           # Mobile detection hook
+│   ├── use-toast.js             # Toast notification hook
+│   └── useMovies.js             # Movie CRUD operations hook
+│
+├── 📂 lib/
+│   └── utils.js                 # Utility functions (cn, etc.)
+│
+├── 📂 pages/
+│   ├── Index.jsx                # Main movie list page
+│   └── NotFound.jsx             # 404 error page
+│
+├── 📂 services/
+│   └── movieService.js          # API service for backend calls
+│
+├── 📂 types/
+│   └── movie.js                 # Movie type definitions
+│
+├── App.tsx                      # Root application component
+├── App.css                      # Global application styles
+├── index.css                    # Tailwind CSS & design tokens
+├── main.jsx                     # Application entry point
+└── vite-env.d.js                # Vite type declarations
+```
+
+---
+
+
+## 📄 Pages
+
+### 1. Movie List (Index)
+**Route**: `/`
+
+| Feature | Description |
+|---------|-------------|
+| Grid Layout | Responsive movie card grid |
+| Search | Filter movies by title |
+| Add Movie | Button to open add form |
+| View/Edit/Delete | Actions on each card |
+
+### 2. Not Found
+**Route**: `/*`
+
+- 404 error page for invalid routes
+
+---
+
+## 🧩 Components
+
+### MovieCard
+Displays individual movie information in a card format.
+
+```jsx
+<MovieCard 
+  movie={movieData}
+  onView={() => handleView(id)}
+  onEdit={() => handleEdit(id)}
+  onDelete={() => handleDelete(id)}
+/>
+```
+
+**Props:**
+| Prop | Type | Description |
+|------|------|-------------|
+| movie | Object | Movie data object |
+| onView | Function | View button callback |
+| onEdit | Function | Edit button callback |
+| onDelete | Function | Delete button callback |
+
+---
+
+### MovieForm
+Form for adding or editing movies.
+
+```jsx
+<MovieForm
+  movie={existingMovie}  // null for new movie
+  onSubmit={handleSubmit}
+  onCancel={handleCancel}
+  isLoading={isSubmitting}
+/>
+```
+
+**Props:**
+| Prop | Type | Description |
+|------|------|-------------|
+| movie | Object/null | Existing movie data or null |
+| onSubmit | Function | Form submission handler |
+| onCancel | Function | Cancel button callback |
+| isLoading | Boolean | Loading state for submit |
+
+---
+
+### MovieDetails
+Displays full movie details in a modal/panel.
+
+```jsx
+<MovieDetails
+  movie={selectedMovie}
+  onClose={handleClose}
+  onEdit={handleEdit}
+  onDelete={handleDelete}
+/>
+```
+
+---
+
+### SearchInput
+Search input with debounced filtering.
+
+```jsx
+<SearchInput
+  value={searchQuery}
+  onChange={setSearchQuery}
+  placeholder="Search movies..."
+/>
+```
+
+---
+
+## 🪝 Hooks
+
+### useMovies
+Custom hook for movie CRUD operations.
+
+```jsx
+const {
+  movies,           // Array of movies
+  isLoading,        // Loading state
+  error,            // Error state
+  addMovie,         // Function to add movie
+  updateMovie,      // Function to update movie
+  deleteMovie,      // Function to delete movie
+  searchMovies      // Function to search movies
+} = useMovies();
+```
+
+---
+
+## 🔌 API Service
+
+### movieService.js
+
+```javascript
+// API Base URL (update for production)
+const API_BASE_URL = 'http://localhost:5000/api/movies';
+
+// Available Methods
+movieService.getAll()              // GET all movies
+movieService.getById(id)           // GET single movie
+movieService.create(formData)      // POST new movie
+movieService.update(id, formData)  // PUT update movie
+movieService.delete(id)            // DELETE movie
+movieService.search(query)         // GET search results
+```
+
+---
+
+## 🚀 Running the Application
+
+### Development Mode
+```bash
+npm run dev
+```
+Application runs at: `http://localhost:5173`
+
+### Production Build
+```bash
+npm run build
+npm run preview
+```
+
+---
+
+
+---
+
+## 📱 Responsive Breakpoints
+
+| Breakpoint | Width | Description |
+|------------|-------|-------------|
+| `sm` | 640px | Small devices |
+| `md` | 768px | Tablets |
+| `lg` | 1024px | Laptops |
+| `xl` | 1280px | Desktops |
+| `2xl` | 1536px | Large screens |
+
+---
+
+## 🔧 Configuration Files
+
+| File | Purpose |
+|------|---------|
+| `vite.config.ts` | Vite build configuration |
+| `tailwind.config.ts` | Tailwind CSS configuration |
+| `tsconfig.json` | TypeScript configuration |
+| `index.html` | HTML entry point |
+
+---
+
+## 📌 Notes
+
+- Currently uses mock data (`mockMovies.js`) for development
+- Update `movieService.js` to connect to real backend
+- All components are responsive by default
+- Dark theme with gold/amber accents
+- Supports image upload for movie posters
+
+---
+
+## 👨‍💻 Author
+
+Movie Management System Frontend
+
+
+demo link - https://drive.google.com/file/d/1qSE5GTgloruykiECxTzDCkByIKzxLcWV/view?usp=sharing
