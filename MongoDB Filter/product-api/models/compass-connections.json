@@ -1,0 +1,44 @@
+{
+  "type": "Compass Connections",
+  "version": {
+    "$numberInt": "1"
+  },
+  "connections": [
+    {
+      "id": "bd798aba-2ade-4c46-8ae4-59ef2230bc77",
+      "lastUsed": {
+        "$date": {
+          "$numberLong": "1766991356846"
+        }
+      },
+      "favorite": {
+        "name": "blog"
+      },
+      "savedConnectionType": "recent",
+      "connectionOptions": {
+        "connectionString": "mongodb://localhost:27017/",
+        "oidc": {
+          "serializedState": "eyJvaWRjUGx1Z2luU3RhdGVWZXJzaW9uIjoxLCJzdGF0ZSI6W119"
+        }
+      }
+    },
+    {
+      "id": "ed94bf18-9343-4b71-bc8c-df8e18388aa2",
+      "lastUsed": {
+        "$date": {
+          "$numberLong": "1766991164030"
+        }
+      },
+      "favorite": {
+        "name": "kashi"
+      },
+      "savedConnectionType": "favorite",
+      "connectionOptions": {
+        "connectionString": "mongodb://localhost:27017/",
+        "oidc": {
+          "serializedState": "eyJvaWRjUGx1Z2luU3RhdGVWZXJzaW9uIjoxLCJzdGF0ZSI6W119"
+        }
+      }
+    }
+  ]
+}
