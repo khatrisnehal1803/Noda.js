@@ -1,0 +1,165 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body with simple, elegant background */
+body {
+  font-family: 'Helvetica Neue', Arial, sans-serif; /* Clean, modern font */
+  line-height: 1.6;
+  color: #333; /* Dark gray for text */
+  background-color: #f9f9f9; /* Light gray background */
+  min-height: 100vh;
+  padding: 20px;
+}
+
+/* Navbar with minimal styling */
+nav {
+  background-color: #ffffff; /* White background */
+  color: #333;
+  padding: 15px 20px;
+  margin-bottom: 30px;
+  border-bottom: 1px solid #e0e0e0; /* Subtle border */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Light shadow for depth */
+}
+
+nav a {
+  color: #333;
+  margin-right: 20px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s ease; /* Gentle hover transition */
+}
+
+nav a:hover {
+  color: #007bff; /* Soft blue on hover */
+}
+
+nav button {
+  background-color: #007bff; /* Simple blue */
+  color: white;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 4px;
+   cursor: pointer;
+  font-weight: 20%; 
+  transition: background-color 0.2s ease;
+  width: 100px;
+}
+
+nav button:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+}
+
+/* Form with clean, elegant design */
+form {
+  max-width: 450px;
+  margin: 30px auto;
+  padding: 25px;
+  background-color: #ffffff; /* White background */
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+form h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+  font-size: 1.4em;
+  font-weight: 600;
+}
+
+/* Inputs, textarea, and buttons with minimal styling */
+input, textarea, button {
+  display: block;
+  width: 100%;
+  margin-bottom: 15px;
+  padding: 12px;
+  border: 1px solid #ddd; /* Light border */
+  border-radius: 4px;
+  font-size: 1em;
+  transition: border-color 0.2s ease; /* Subtle focus transition */
+}
+
+input:focus, textarea:focus {
+  border-color: #007bff; /* Blue focus */
+  outline: none;
+}
+
+textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+button {
+  background-color: #007bff; /* Blue button */
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background-color 0.2s ease;
+}
+
+button:hover {
+  background-color: #0056b3; /* Darker blue */
+}
+
+/* Blog list and other elements */
+.blog-item {
+  background-color: #ffffff;
+  margin: 20px 0;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.blog-item h2 {
+  color: #333;
+  margin-bottom: 10px;
+  font-size: 1.3em;
+}
+
+.blog-item p {
+  color: #666; /* Medium gray */
+}
+
+.blog-item a {
+  color: #007bff;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+.blog-item a:hover {
+  color: #0056b3;
+}
+
+/* Images with simple styling */
+img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 4px;
+  margin-top: 10px;
+}
+
+/* Responsive design for mobile */
+@media (max-width: 768px) {
+  body {
+    padding: 10px;
+  }
+  nav {
+    flex-direction: column;
+    text-align: center;
+  }
+  form {
+    max-width: 100%;
+    padding: 20px;
+  }
+  .blog-item {
+    margin: 10px 0;
+  }
+}
