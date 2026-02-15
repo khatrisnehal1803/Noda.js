@@ -1,64 +1,104 @@
-📌 Project Description
-🛒 Advanced E-Commerce Web Application with OTP Authentication
+Demo Link - 
+https://drive.google.com/file/d/1M76WwpVOQhR0EM7pnelFZqHwOaCagF9H/view?usp=sharing
 
-This project is a modern full-stack E-Commerce web application developed using React.js, Node.js, Express.js, and MongoDB. It provides a secure and scalable online shopping platform where users can browse products, manage their cart, and place orders efficiently.
 
-The core highlight of this project is the implementation of a secure OTP-based Email Verification System, which ensures that only verified users can access the platform. This enhances security and prevents fake registrations.
+🎓 Smart School Admin Panel
 
-The system is divided into two main modules:
+A modern and responsive School Management Admin Dashboard built for managing students, professors, courses, admissions, and performance analytics in one place.
 
-. 👤 User Panel – For customers to shop and manage orders
+This project provides a complete administrative interface with real-time statistics, charts, tables, and management features.
 
-. 👨‍💼 Admin Panel – For managing products, users, and orders
+🚀 Features
+📊 Dashboard Overview
 
-. 🚀 Key Highlights
+Total Students count
 
-. 🔐 Secure Authentication using JWT
+New Students statistics
 
-. 📧 OTP-based Email Verification during registration
+Total Courses
 
-. 🛍 Complete Cart & Order Management System
+Visitors data
 
-🧑‍💻 Role-Based Access Control (User & Admin)
+Fees Collection overview
 
-⚡ RESTful API Integration
+Real-time data charts
 
-🔒 Password Encryption using bcrypt
+University Survey analytics
 
-📊 Structured and Scalable Project Architecture
+Student performance (Math & Science)
 
-🔐 OTP Authentication System
+New admissions statistics
 
-When a user registers:
+👩‍🏫 Professor Management
 
-A 6-digit OTP is generated dynamically
+Add / Edit / Delete Professors
 
-OTP is sent to the user's registered email
+Department-wise listing
 
-User verifies the OTP
+Gender & Degree details
 
-Account gets activated only after successful verification
+Contact information (Mobile & Email)
 
-This process ensures enhanced security and reliable user authentication.
+Joining Date tracking
 
-💡 Why This Project is Important
+👨‍🎓 Student Management
 
-This project demonstrates:
+Add / Edit / Delete Students
+
+Roll Number management
+
+Department allocation
+
+Admission Date tracking
+
+Fees status (Paid / Unpaid)
+
+Student list with search & pagination
+
+📚 Course & Department Management
+
+Manage available courses
+
+Department structure
+
+Library section
+
+Event management system
+
+📈 Reports & Analytics
+
+Monthly survey reports
+
+Performance tracking
+
+Growth percentage indicators
+
+Real-time data visualization
+
+🛠️ Tech Stack
+
+Frontend:
+React.js
+Bootstrap / CSS
+Chart Library (for analytics graphs)
+
+Backend:
+Node.js
+Express.js
+
+Database:
+MongoDB
+
+🎯 Purpose
+
+This project is built to demonstrate:
 
 Full-stack development skills
 
-Frontend-Backend integration
+CRUD operations
 
-Secure authentication mechanisms
+Authentication & role-based access
 
-Real-world database design
+Data visualization
 
-Clean project structure and scalable architecture
-
-It simulates a real-world E-Commerce platform and can be extended with payment gateway integration and advanced features.
-
-🎯 Conclusion
-
-The Advanced E-Commerce Web Application successfully combines modern web technologies with secure authentication practices. The OTP verification system adds an additional layer of protection, making the platform reliable and production-ready.
-
-This project reflects strong understanding of MERN stack development and secure system design principles.
+Clean UI dashboard design
