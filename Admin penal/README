@@ -1,1 +1,151 @@
+📄 PROJECT DESCRIPTION
+🛒 Project Title
 
+Admin penal
+
+📌 Project Overview
+
+This project is a full-stack web application developed to provide an online shopping platform where users can browse products, add them to cart, and place orders securely.
+
+The main highlight of this project is the implementation of a secure OTP (One Time Password) based email verification system during user registration.
+
+The application consists of two main modules:
+
+User Module
+
+Admin Module
+
+The project is developed using modern technologies like React.js for frontend and Node.js with Express.js for backend, along with MongoDB as the database.
+
+🎯 Purpose of the Project
+
+The purpose of this project is to:
+
+Develop a real-world E-Commerce platform
+
+Implement secure authentication using OTP verification
+
+Provide role-based access (User & Admin)
+
+Manage products, users, and orders efficiently
+
+Demonstrate full-stack development skills
+
+👤 User Module Description
+
+The User module allows customers to:
+
+Register with email and password
+
+Receive OTP on email
+
+Verify account using OTP
+
+Login securely using JWT authentication
+
+View available products
+
+Add products to cart
+
+Place orders
+
+View order history
+
+The OTP verification ensures that only genuine users can create accounts and access the system.
+
+👨‍💼 Admin Module Description
+
+The Admin module allows the administrator to:
+
+Login securely
+
+Add new products
+
+Update existing products
+
+Delete products
+
+View all registered users
+
+View all orders
+
+Monitor system activities
+
+This module helps in efficient management of the E-Commerce platform.
+
+🔐 OTP Authentication Process
+
+User fills registration form
+
+System generates a random 6-digit OTP
+
+OTP is sent to user’s registered email
+
+User enters OTP on verification page
+
+If OTP matches → Account is verified
+
+After verification → User can login
+
+This process increases security and prevents fake registrations.
+
+🛠 Technologies Used
+Frontend:
+
+React.js
+
+React Router
+
+Context API
+
+Axios
+
+Bootstrap / Tailwind CSS
+
+Backend:
+
+Node.js
+
+Express.js
+
+MongoDB
+
+Mongoose
+
+JWT
+
+bcrypt
+
+Nodemailer
+
+💾 Database Description
+
+The system uses MongoDB database with following main collections:
+
+Users
+
+Products
+
+Orders
+
+Cart
+
+Passwords are stored in encrypted format using bcrypt for security.
+
+🔒 Security Features
+
+Password hashing
+
+JWT token authentication
+
+OTP email verification
+
+Protected routes
+
+Role-based access control
+
+🚀 Conclusion
+
+This project successfully implements a secure and scalable E-Commerce web application using modern full-stack technologies. The OTP verification system enhances security and ensures reliable user authentication.
+
+The project demonstrates practical implementation of frontend-backend integration, database management, and secure authentication mechanisms.
