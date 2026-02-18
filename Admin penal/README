@@ -1,0 +1,105 @@
+
+Demo Link - 
+https://drive.google.com/file/d/1M76WwpVOQhR0EM7pnelFZqHwOaCagF9H/view?usp=sharing
+
+
+🎓 Smart School Admin Panel
+
+A modern and responsive School Management Admin Dashboard built for managing students, professors, courses, admissions, and performance analytics in one place.
+
+This project provides a complete administrative interface with real-time statistics, charts, tables, and management features.
+
+🚀 Features
+📊 Dashboard Overview
+
+Total Students count
+
+New Students statistics
+
+Total Courses
+
+Visitors data
+
+Fees Collection overview
+
+Real-time data charts
+
+University Survey analytics
+
+Student performance (Math & Science)
+
+New admissions statistics
+
+👩‍🏫 Professor Management
+
+Add / Edit / Delete Professors
+
+Department-wise listing
+
+Gender & Degree details
+
+Contact information (Mobile & Email)
+
+Joining Date tracking
+
+👨‍🎓 Student Management
+
+Add / Edit / Delete Students
+
+Roll Number management
+
+Department allocation
+
+Admission Date tracking
+
+Fees status (Paid / Unpaid)
+
+Student list with search & pagination
+
+📚 Course & Department Management
+
+Manage available courses
+
+Department structure
+
+Library section
+
+Event management system
+
+📈 Reports & Analytics
+
+Monthly survey reports
+
+Performance tracking
+
+Growth percentage indicators
+
+Real-time data visualization
+
+🛠️ Tech Stack
+
+Frontend:
+React.js
+Bootstrap / CSS
+Chart Library (for analytics graphs)
+
+Backend:
+Node.js
+Express.js
+
+Database:
+MongoDB
+
+🎯 Purpose
+
+This project is built to demonstrate:
+
+Full-stack development skills
+
+CRUD operations
+
+Authentication & role-based access
+
+Data visualization
+
+Clean UI dashboard design
