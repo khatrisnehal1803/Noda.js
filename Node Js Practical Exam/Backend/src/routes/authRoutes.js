@@ -3,7 +3,6 @@ const router = express.Router();
 const User = require("../models/User");
 const bcrypt = require("bcryptjs");
 
-// Signup
 router.post("/signup", async (req, res) => {
   const { username, email, password } = req.body;
 
@@ -18,7 +17,6 @@ router.post("/signup", async (req, res) => {
   res.send("User Registered Successfully");
 });
 
-// Login
 router.post("/login", async (req, res) => {
   const { email, password } = req.body;
 
@@ -33,7 +31,7 @@ router.post("/login", async (req, res) => {
   res.send("Login Successful");
 });
 
-// Logout
+
 router.get("/logout", (req, res) => {
   req.session.destroy();
   res.send("Logged out");
